@@ -1,3 +1,3 @@
 # Stirling
 
-Signal analyzer including CPB and FFT analysis
+Signal analyzer including CPB and FFT analysis.
