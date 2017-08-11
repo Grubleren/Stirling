@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE451354-321D-412E-9828-E18041DF4AAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Machine</RootNamespace>
+    <AssemblyName>Machine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ButterworthFilter">
+      <HintPath>..\..\Publish\ButterworthFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="DisplayComponent">
+      <HintPath>..\..\Publish\DisplayComponent.dll</HintPath>
+    </Reference>
+    <Reference Include="FilterBank">
+      <HintPath>..\..\Publish\FilterBank.dll</HintPath>
+    </Reference>
+    <Reference Include="IPPWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Publish\IPPWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FunctionBlockHandler.cs" />
+    <Compile Include="Machine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine.Designer.cs">
+      <DependentUpon>Machine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Machine.resx">
+      <DependentUpon>Machine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FftAdapter\FftAdapter.csproj">
+      <Project>{8a8c7850-af1a-4ba4-b53c-5322ec791dc6}</Project>
+      <Name>FftAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Afilter\Afilter.csproj">
+      <Project>{07f58827-3e87-4758-ba6f-91c714030fad}</Project>
+      <Name>Afilter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BBdetector\BBdetector.csproj">
+      <Project>{ec29777a-75e2-43b0-8c5f-f2f45765f82a}</Project>
+      <Name>BBdetector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CpbAnalysis\CpbAnalysis.csproj">
+      <Project>{6867f50d-ec52-4559-a9b5-aca23f5f7d1c}</Project>
+      <Name>CpbAnalysis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DetectorBank\DetectorBank.csproj">
+      <Project>{2c67a5c4-8476-4f29-a48f-b64bfc2f3a03}</Project>
+      <Name>DetectorBank</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Detector\Detector.csproj">
+      <Project>{1ccef142-2cb5-459b-a3a4-d3bbe72f0fbc}</Project>
+      <Name>Detector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Display\Display.csproj">
+      <Project>{3b2d190a-d9d7-4dda-ad87-28056f66b7ae}</Project>
+      <Name>Display</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FftAnalysis\FftAnalysis.csproj">
+      <Project>{d7d1b3d9-d323-4bc6-96a1-6ea1b2a3879b}</Project>
+      <Name>FftAnalysis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Generator\Generator.csproj">
+      <Project>{13bb0bbc-dc76-4b00-9e46-9737914c3985}</Project>
+      <Name>Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Measure\Measure.csproj">
+      <Project>{c4607e64-7ffb-4759-bc45-08f28fa49c99}</Project>
+      <Name>Measure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlayBack\PlayBack.csproj">
+      <Project>{5605e83d-e681-449f-a93a-5131d9c0d00f}</Project>
+      <Name>PlayBack</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoundCard\SoundCard.csproj">
+      <Project>{65dfd681-acc5-485d-8b83-58099cf6935e}</Project>
+      <Name>SoundCard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Upsampling\Upsampling.csproj">
+      <Project>{ea864f98-4951-4f95-84a7-961ba08049cc}</Project>
+      <Name>Upsampling</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>call "$(SolutionDir)Publish.bat"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
