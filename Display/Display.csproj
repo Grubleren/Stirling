@@ -32,10 +32,6 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DisplayComponent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Publish\DisplayComponent.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -51,6 +47,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DisplayComponent\DisplayComponent.csproj">
+      <Project>{3ed31716-bf69-48e4-be80-aa796280b945}</Project>
+      <Name>DisplayComponent</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FftAdapter\FftAdapter.csproj">
       <Project>{8a8c7850-af1a-4ba4-b53c-5322ec791dc6}</Project>
       <Name>FftAdapter</Name>

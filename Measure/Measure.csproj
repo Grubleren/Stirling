@@ -34,12 +34,6 @@
     <RegisterForComInterop>false</RegisterForComInterop>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DisplayComponent">
-      <HintPath>..\..\Publish\DisplayComponent.dll</HintPath>
-    </Reference>
-    <Reference Include="IPPWrapper">
-      <HintPath>..\..\Publish\IPPWrapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -48,13 +42,24 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WaveIO">
-      <HintPath>..\..\Publish\WaveIO.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Measure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DisplayComponent\DisplayComponent.csproj">
+      <Project>{3ed31716-bf69-48e4-be80-aa796280b945}</Project>
+      <Name>DisplayComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPPWrapper\IPPWrapper.csproj">
+      <Project>{0f1ae7c3-b3ac-4343-ac2f-3957f4c4759a}</Project>
+      <Name>IPPWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WaveIO\WaveIO.csproj">
+      <Project>{454eb877-f0cf-424d-8bc6-fa95264865bb}</Project>
+      <Name>WaveIO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -32,19 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ButterworthFilter">
-      <HintPath>..\..\Publish\ButterworthFilter.dll</HintPath>
-    </Reference>
-    <Reference Include="DisplayComponent">
-      <HintPath>..\..\Publish\DisplayComponent.dll</HintPath>
-    </Reference>
-    <Reference Include="FilterBank">
-      <HintPath>..\..\Publish\FilterBank.dll</HintPath>
-    </Reference>
-    <Reference Include="IPPWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Publish\IPPWrapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -94,6 +81,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ButterworthFilter\ButterworthFilter.csproj">
+      <Project>{77bfbcaa-815e-41f1-8962-5492bbe59f11}</Project>
+      <Name>ButterworthFilter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DisplayComponent\DisplayComponent.csproj">
+      <Project>{3ed31716-bf69-48e4-be80-aa796280b945}</Project>
+      <Name>DisplayComponent</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FftAdapter\FftAdapter.csproj">
       <Project>{8a8c7850-af1a-4ba4-b53c-5322ec791dc6}</Project>
       <Name>FftAdapter</Name>
@@ -126,9 +121,17 @@
       <Project>{d7d1b3d9-d323-4bc6-96a1-6ea1b2a3879b}</Project>
       <Name>FftAnalysis</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Generators\Generators.csproj">
+      <Project>{6b92e710-ab25-48d5-8325-d91d563320d7}</Project>
+      <Name>Generators</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Generator\Generator.csproj">
       <Project>{13bb0bbc-dc76-4b00-9e46-9737914c3985}</Project>
       <Name>Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPPWrapper\IPPWrapper.csproj">
+      <Project>{0f1ae7c3-b3ac-4343-ac2f-3957f4c4759a}</Project>
+      <Name>IPPWrapper</Name>
     </ProjectReference>
     <ProjectReference Include="..\Measure\Measure.csproj">
       <Project>{c4607e64-7ffb-4759-bc45-08f28fa49c99}</Project>
@@ -145,6 +148,10 @@
     <ProjectReference Include="..\Upsampling\Upsampling.csproj">
       <Project>{ea864f98-4951-4f95-84a7-961ba08049cc}</Project>
       <Name>Upsampling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WaveIO\WaveIO.csproj">
+      <Project>{454eb877-f0cf-424d-8bc6-fa95264865bb}</Project>
+      <Name>WaveIO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

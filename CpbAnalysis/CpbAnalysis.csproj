@@ -32,15 +32,6 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ButterworthFilter">
-      <HintPath>..\..\Publish\ButterworthFilter.dll</HintPath>
-    </Reference>
-    <Reference Include="DisplayComponent">
-      <HintPath>..\..\Publish\DisplayComponent.dll</HintPath>
-    </Reference>
-    <Reference Include="FilterBank">
-      <HintPath>..\..\Publish\FilterBank.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -56,6 +47,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ButterworthFilter\ButterworthFilter.csproj">
+      <Project>{77bfbcaa-815e-41f1-8962-5492bbe59f11}</Project>
+      <Name>ButterworthFilter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DisplayComponent\DisplayComponent.csproj">
+      <Project>{3ed31716-bf69-48e4-be80-aa796280b945}</Project>
+      <Name>DisplayComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FilterBank\FilterBank.csproj">
+      <Project>{9c388166-4634-48fd-aca6-7961de14426a}</Project>
+      <Name>FilterBank</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Measure\Measure.csproj">
       <Project>{c4607e64-7ffb-4759-bc45-08f28fa49c99}</Project>
       <Name>Measure</Name>

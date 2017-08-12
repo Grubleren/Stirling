@@ -32,9 +32,6 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IPPWrapper">
-      <HintPath>..\..\Publish\IPPWrapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +46,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IPPWrapper\IPPWrapper.csproj">
+      <Project>{0f1ae7c3-b3ac-4343-ac2f-3957f4c4759a}</Project>
+      <Name>IPPWrapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Measure\Measure.csproj">
       <Project>{c4607e64-7ffb-4759-bc45-08f28fa49c99}</Project>
       <Name>Measure</Name>

@@ -41,9 +41,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WaveIO">
-      <HintPath>..\..\Publish\WaveIO.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PlayBack.cs" />
@@ -53,6 +50,10 @@
     <ProjectReference Include="..\Measure\Measure.csproj">
       <Project>{c4607e64-7ffb-4759-bc45-08f28fa49c99}</Project>
       <Name>Measure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WaveIO\WaveIO.csproj">
+      <Project>{454eb877-f0cf-424d-8bc6-fa95264865bb}</Project>
+      <Name>WaveIO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
