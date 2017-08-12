@@ -59,6 +59,25 @@ call :xcopym /y /r /f "PlayBack\bin\release\PlayBack.pdb" %DirFile%
 call :xcopym /y /r /f "Generator\bin\release\Generator.dll" %DirFile%
 call :xcopym /y /r /f "Generator\bin\release\Generator.pdb" %DirFile%
 
+call :xcopym /y /r /f "Butterworth\bin\release\Butterworth.dll" %DirFile%
+call :xcopym /y /r /f "Butterworth\bin\release\Butterworth.pdb" %DirFile%
+
+call :xcopym /y /r /f "Generators\bin\release\Generators.dll" %DirFile%
+call :xcopym /y /r /f "Generators\bin\release\Generators.pdb" %DirFile%
+
+call :xcopym /y /r /f "DisplayComponent\bin\release\DisplayComponent.dll" %DirFile%
+call :xcopym /y /r /f "DisplayComponent\bin\release\DisplayComponent.pdb" %DirFile%
+
+call :xcopym /y /r /f "IppWrapper\bin\release\IppWrapper.dll" %DirFile%
+call :xcopym /y /r /f "IppWrapper\bin\release\IppWrapper.pdb" %DirFile%
+
+call :xcopym /y /r /f "FilterBank\bin\release\FilterBank.dll" %DirFile%
+call :xcopym /y /r /f "FilterBank\bin\release\FilterBank.pdb" %DirFile%
+
+call :xcopym /y /r /f "WaveIO\bin\release\WaveIO.dll" %DirFile%
+call :xcopym /y /r /f "WaveIO\bin\release\WaveIO.pdb" %DirFile%
+
+
 
 
 goto :eof

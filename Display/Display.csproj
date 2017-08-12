@@ -79,6 +79,10 @@
       <Project>{d7d1b3d9-d323-4bc6-96a1-6ea1b2a3879b}</Project>
       <Name>FftAnalysis</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IPPWrapper\IPPWrapper.csproj">
+      <Project>{0f1ae7c3-b3ac-4343-ac2f-3957f4c4759a}</Project>
+      <Name>IPPWrapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Measure\Measure.csproj">
       <Project>{c4607e64-7ffb-4759-bc45-08f28fa49c99}</Project>
       <Name>Measure</Name>
